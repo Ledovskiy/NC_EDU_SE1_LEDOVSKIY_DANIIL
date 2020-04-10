@@ -11,8 +11,12 @@
   <div
     class ="form-group"
     [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
+
     <p>Введите email</p>
-    <label for="email"></label><input
+
+    <label for="email"></label>
+
+    <input
     type = "text"
     placeholder = "Введите ваш email"
     class = "form-control underlined"
@@ -28,6 +32,7 @@
 
   </span>
   </div>
+
 
   <div
     class ="form-group"
@@ -60,6 +65,7 @@
   <div class="form-group">
     <button
       [disabled]="form.invalid "
+      routerLink="/home/catalog"
     >Войти
     </button>
   </div>
@@ -73,8 +79,6 @@
   </div>
 
 
+
 </form>
-
-
-
 
