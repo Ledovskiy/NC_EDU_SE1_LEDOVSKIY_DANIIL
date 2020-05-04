@@ -1,16 +1,16 @@
-<form class="regForm"  [formGroup]="form" (ngSubmit)="onSubmit()">
+<form class="regForm" [formGroup]="form" (ngSubmit)="onSubmit()">
 
-  <p class="text-xs-center">Регистрация</p>
+  <p class="name">Регистрация</p>
 
   <div
     class="form-group"
     [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
     <label for="email"></label>
     <input
-      type = "text"
+      type="text"
       id="email"
       class="form-control underlined"
-      placeholder = "Введите ваш email"
+      placeholder="Введите ваш email"
       formControlName="email">
     <span
       class="form-help-text"
@@ -19,14 +19,13 @@
     <span *ngIf="form.get('email') ['errors']['required']">Поле email не может быть пустым.</span>
     <span *ngIf="form.get('email') ['errors']['email']">Введите корректный email</span>
 
-    <span *ngIf="form.get('email') ['errors']['forbiddenEmail']">email уже занят</span>
+    <span *ngIf="form.get('email') ['errors']">email уже занят</span>
 
   </span>
   </div>
 
   <div class="form-group"
        [ngClass]="{'has-error': form.get('password').invalid && form.get('password').touched}">
-    <label for="password">Пароль</label>
     <input
       type="password"
       class="form-control underlined"
@@ -38,10 +37,11 @@
       *ngIf="form.get('password').invalid && form.get('password').touched">
 
     <span *ngIf="form.get('password') ['errors']['required']">Поле пароль не может быть пустым.</span>
-    <span *ngIf="form.get('password') ['errors']['minlength'] && form.get('password') ['errors']['minlength']['requiredLength'] ">
-      Минимальная необходимая длинна пароля
+    <span
+      *ngIf="form.get('password') ['errors']['minlength'] && form.get('password') ['errors']['minlength']['requiredLength'] ">
+      Минимальная длинна пароля
       {{ form.get('password') ['errors']['minlength']['requiredLength'] }} символов.
-      На данный момент введено  {{ form.get('password') ['errors']['minlength']['actualLength'] }}.
+      Вы ввели {{ form.get('password') ['errors']['minlength']['actualLength'] }}.
     </span>
   </span>
   </div>
@@ -49,7 +49,6 @@
   <div
     class="form group"
     [ngClass]="{'has-error': form.get('name').invalid && form.get('name').touched}">
-    <label for="name">Имя</label>
     <input
       type="text"
       class="form-control underlined"
@@ -79,7 +78,8 @@
   <div class="form-group">
     <button
       type="submit" class="btn btn-block btn-primary"
-    [disabled]="form.invalid">
+      [disabled]="form.invalid"
+      >
       Зарегестрироваться
     </button>
   </div>

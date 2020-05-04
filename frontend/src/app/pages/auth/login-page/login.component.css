@@ -1,12 +1,30 @@
 @import url('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
-.logForm{
-  position:absolute;
-  left:500px;
-  top:100px;
-  width: 480px;
-  height: 450px;
+
+.logForm {
+  position: absolute;
+  left: 500px;
+  top: 100px;
+  width: auto;
+  height: auto;
   border: #d7ccc8 solid thin;
   border-radius: 32px;
   margin: 0;
   padding: 40px;
+  color: black;
+}
+
+.form-control {
+  width: 400px;
+}
+
+.btn {
+  background-color: #ff9900;
+  color: #000000;
+  font-weight: bold;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
 }

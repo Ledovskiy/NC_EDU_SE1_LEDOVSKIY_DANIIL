@@ -1,0 +1,20 @@
+<div class="wallet-block">
+  <div
+    *ngFor="let wallet of wallets"
+    class="wallet">
+
+    <div class="wallet-name">
+      {{wallet.wallet}}
+    </div>
+
+    <div class="wallet-balance">
+      {{wallet.balance}} wallet balance
+    </div>
+
+    <div class="wallet-button">
+      <a href="#">ADD MONEY</a>
+    </div>
+
+  </div>
+</div>
+

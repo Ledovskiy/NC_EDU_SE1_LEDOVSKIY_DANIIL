@@ -1,0 +1,25 @@
+<mat-toolbar class="header">
+  <div class="header_navbar">
+
+    <div class="header_logo">
+      SubTracker Admin
+    </div>
+
+    <a
+      class="headerButton button"
+      routerLinkActive="active"
+      [routerLink]="['/admin', 'user-list']"> Список пользователей </a>
+  </div>
+
+  <div class="header_navbar">
+    <a
+      class="headerButton button"
+      routerLinkActive="active"
+      href="#" (click)="logout($event)">  Выйти </a>
+  </div>
+</mat-toolbar>
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

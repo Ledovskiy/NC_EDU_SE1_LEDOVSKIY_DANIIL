@@ -1,0 +1,66 @@
+<form
+  [formGroup]="form"
+  class="create-form">
+  <h1>Создание новой подписки</h1>
+
+
+  <div
+    [ngClass]="{invalid: form.get('serviceName').touched && form.get('serviceName').invalid}"
+  >
+    <label for="serviceName">Название подписки:</label>
+
+    <br>
+
+    <input class="create-input" id="serviceName" type="text" formControlName="serviceName">
+
+    <div
+      *ngIf="form.get('serviceName').touched && form.get('serviceName').invalid"
+      class="validation"
+    >
+      <small *ngIf="form.get('serviceName').errors.required">
+        Введите название подписки
+      </small>
+    </div>
+  </div>
+
+  <br>
+
+  <div
+    [ngClass]="{invalid: form.get('price').touched && form.get('price').invalid}"
+  >
+    <label for="price">Стоимость подписки:</label>
+
+    <br>
+
+    <input class="create-input" id="price" type="number" formControlName="price">
+    <div
+      *ngIf="form.get('price').touched && form.get('price').invalid"
+      class="validation"
+    >
+      <small *ngIf="form.get('price').errors.required">
+        Введите стоимость подписки ( не меньше 0)
+      </small>
+      <small *ngIf="form.get('price').errors.min">
+        Введите стоимость подписки ( не меньше 0)
+      </small>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="form-control">
+    <label>Информация о подписке:</label>
+    <quill-editor formControlName="information"></quill-editor>
+  </div>
+
+  <br>
+
+  <Button
+    class="create-button"
+    type="submit"
+    (click)="createService()"
+    [disabled]="form.invalid">Добавить подписку
+  </Button>
+
+
+</form>

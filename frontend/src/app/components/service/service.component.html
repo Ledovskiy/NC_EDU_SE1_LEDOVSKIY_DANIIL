@@ -1,0 +1,25 @@
+<div class="card-block">
+  <div
+    *ngFor="let service of services"
+    class="card">
+
+    <div class="card-name">
+      {{service.serviceName}}
+    </div>
+
+    <div class="card-price">
+      {{service.price}}$ for 30 days
+    </div>
+
+
+    <button mat-raised-button
+            [routerLink]="['/home','information', service.id]">
+      More Information
+    </button>
+
+    <button mat-raised-button>
+      SUBSCRIBE
+    </button>
+
+  </div>
+</div>

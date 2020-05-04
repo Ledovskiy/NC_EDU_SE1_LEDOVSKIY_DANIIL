@@ -1,0 +1,32 @@
+<mat-toolbar class="header">
+    <div class="header_navbar">
+
+      <div class="header_logo">
+        SubTracker Provider
+      </div>
+
+      <a
+        class="headerButton button"
+        routerLinkActive="active"
+        [routerLink]="['/provider', 'dashboard']"> Главная </a>
+
+      <a
+        class="headerButton button"
+        routerLinkActive="active"
+        [routerLink]="['/provider', 'create']">
+        Добавить подписку</a>
+
+    </div>
+
+  <div class="header_navbar">
+    <a
+      class="headerButton button"
+      routerLinkActive="active"
+      href="#" (click)="logout($event)">  Выйти </a>
+  </div>
+</mat-toolbar>
+
+<br>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

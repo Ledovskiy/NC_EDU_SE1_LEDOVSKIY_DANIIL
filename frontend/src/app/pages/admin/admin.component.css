@@ -1,0 +1,35 @@
+
+.header_logo{
+  padding: 7px 11px;
+  margin-left: 5px;
+  background-color: #ff9900;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.header{
+  justify-content: space-between;
+  background: #000000;
+  height: 60px;
+}
+
+.header_navbar{
+  display: flex;
+  align-items: center;
+}
+
+.button{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.headerButton:hover{
+  font-weight: bold;
+  color: #ff9900;
+}
+a.button.active{
+  font-weight: bold;
+  color: #ff9900;
+}

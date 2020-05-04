@@ -1,10 +1,10 @@
-import {NgModule} from "@angular/core";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { MatSliderModule } from '@angular/material/slider';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatSliderModule} from '@angular/material/slider';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
-import {MatIconModule} from "@angular/material/icon";
-import {QuillModule} from "ngx-quill";
+import {MatIconModule} from '@angular/material/icon';
+import {QuillModule} from 'ngx-quill';
 
 
 @NgModule({
@@ -29,4 +29,5 @@ import {QuillModule} from "ngx-quill";
 
 })
 
-export class SharedModule {}
+export class SharedModule {
+}

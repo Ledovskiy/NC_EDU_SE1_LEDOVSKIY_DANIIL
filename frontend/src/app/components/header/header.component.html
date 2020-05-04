@@ -1,0 +1,39 @@
+<mat-toolbar class="header">
+  <div class="header_navbar">
+
+    <div class="header_logo">
+      SubTracker
+    </div>
+
+    <a
+      class="headerButton button"
+      routerLinkActive="active"
+      [routerLink]="['/home', 'catalog']"
+    >Services </a>
+
+    <a
+      class="headerButton button"
+      routerLinkActive="active"
+      [routerLink]="['/home', 'cabinet']"
+    >My subscriptions</a>
+
+    <a
+      class="headerButton button"
+      routerLinkActive="active"
+      [routerLink]="['/home', 'wallets']"
+    >My wallets</a>
+
+  </div>
+
+  <div class="header_navbar">
+    <a
+      class="headerButton button"
+      routerLinkActive="active"
+      href="#" (click)="logout($event)"> logOut </a>
+  </div>
+</mat-toolbar>
+
+
+
+
+
